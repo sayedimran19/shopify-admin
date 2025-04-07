@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Page, Layout, Card, Text, DataTable, Tabs, Icon, Stack } from "@shopify/polaris"
-import { ChartLineIcon, PersonIcon, ClockIcon, ArrowUpIcon, ArrowDownIcon } from "~/utils/icons"
+import { AnalyticsMajor, CustomersMajor, ClockMajor, ArrowUpMinor, ArrowDownMinor } from "@shopify/polaris-icons"
 import AppLayout from "~/components/AppLayout"
 import { LineChart, BarChart } from "~/components/Charts"
 
@@ -86,10 +86,10 @@ export default function Dashboard() {
                     <Text variant="headingMd">Queries Today</Text>
                     <Text variant="headingLg">{dashboardData.queriesToday}</Text>
                   </Stack>
-                  <Icon source={ChartLineIcon} color="base" />
+                  <Icon source={AnalyticsMajor} color="base" />
                 </Stack>
                 <Stack spacing="tight" alignment="center">
-                  <Icon source={ArrowUpIcon} color="success" />
+                  <Icon source={ArrowUpMinor} color="success" />
                   <Text variant="bodySm" color="success">
                     +12% from yesterday
                   </Text>
@@ -106,10 +106,10 @@ export default function Dashboard() {
                     <Text variant="headingMd">Total Users</Text>
                     <Text variant="headingLg">{dashboardData.totalUsers}</Text>
                   </Stack>
-                  <Icon source={PersonIcon} color="base" />
+                  <Icon source={CustomersMajor} color="base" />
                 </Stack>
                 <Stack spacing="tight" alignment="center">
-                  <Icon source={ArrowUpIcon} color="success" />
+                  <Icon source={ArrowUpMinor} color="success" />
                   <Text variant="bodySm" color="success">
                     +5% from last week
                   </Text>
@@ -126,10 +126,10 @@ export default function Dashboard() {
                     <Text variant="headingMd">Active Users Today</Text>
                     <Text variant="headingLg">{dashboardData.activeUsersToday}</Text>
                   </Stack>
-                  <Icon source={PersonIcon} color="base" />
+                  <Icon source={CustomersMajor} color="base" />
                 </Stack>
                 <Stack spacing="tight" alignment="center">
-                  <Icon source={ArrowUpIcon} color="success" />
+                  <Icon source={ArrowUpMinor} color="success" />
                   <Text variant="bodySm" color="success">
                     +8% from yesterday
                   </Text>
@@ -146,10 +146,10 @@ export default function Dashboard() {
                     <Text variant="headingMd">Avg. Response Time</Text>
                     <Text variant="headingLg">{dashboardData.avgResponseTime}s</Text>
                   </Stack>
-                  <Icon source={ClockIcon} color="base" />
+                  <Icon source={ClockMajor} color="base" />
                 </Stack>
                 <Stack spacing="tight" alignment="center">
-                  <Icon source={ArrowDownIcon} color="success" />
+                  <Icon source={ArrowDownMinor} color="success" />
                   <Text variant="bodySm" color="success">
                     -0.3s from last week
                   </Text>

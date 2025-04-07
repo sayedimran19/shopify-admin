@@ -16,7 +16,7 @@ import {
   SettingToggle,
   Icon,
 } from "@shopify/polaris"
-import { LayoutBlockIcon, StarIcon, SocialAdIcon } from "~/utils/icons"
+import { PageMajor, StarOutlineMinor, SocialAdMajor } from "@shopify/polaris-icons"
 import AppLayout from "~/components/AppLayout"
 
 export default function Customization() {
@@ -210,7 +210,7 @@ export default function Customization() {
                     enabled={productRecommendations}
                   >
                     <Stack>
-                      <Icon source={LayoutBlockIcon} color="base" />
+                      <Icon source={PageMajor} color="base" />
                       <Stack vertical spacing="extraTight">
                         <Text variant="headingMd">Product Recommendations</Text>
                         <Text variant="bodyMd" color="subdued">
@@ -229,7 +229,7 @@ export default function Customization() {
                     enabled={recentlyViewed}
                   >
                     <Stack>
-                      <Icon source={LayoutBlockIcon} color="base" />
+                      <Icon source={PageMajor} color="base" />
                       <Stack vertical spacing="extraTight">
                         <Text variant="headingMd">Recently Viewed</Text>
                         <Text variant="bodyMd" color="subdued">
@@ -248,7 +248,7 @@ export default function Customization() {
                     enabled={customerReviews}
                   >
                     <Stack>
-                      <Icon source={StarIcon} color="base" />
+                      <Icon source={StarOutlineMinor} color="base" />
                       <Stack vertical spacing="extraTight">
                         <Text variant="headingMd">Customer Reviews</Text>
                         <Text variant="bodyMd" color="subdued">
@@ -267,7 +267,7 @@ export default function Customization() {
                     enabled={socialMediaIcons}
                   >
                     <Stack>
-                      <Icon source={SocialAdIcon} color="base" />
+                      <Icon source={SocialAdMajor} color="base" />
                       <Stack vertical spacing="extraTight">
                         <Text variant="headingMd">Social Media Icons</Text>
                         <Text variant="bodyMd" color="subdued">

@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react"
 import { Page, Layout, Card, TextField, Button, Stack, Text, Collapsible } from "@shopify/polaris"
-import { PlusIcon, DeleteIcon, EditIcon, ChevronDownIcon, ChevronUpIcon, SaveIcon } from "~/utils/icons"
+import { PlusMinor, DeleteMinor, EditMinor, ChevronDownMinor, ChevronUpMinor, SaveMinor } from "@shopify/polaris-icons"
 import AppLayout from "~/components/AppLayout"
 
 export default function FAQs() {
@@ -111,15 +111,15 @@ export default function FAQs() {
                         <Button
                           plain
                           onClick={() => toggleExpand(faq.id)}
-                          icon={faq.expanded ? ChevronUpIcon : ChevronDownIcon}
+                          icon={faq.expanded ? ChevronUpMinor : ChevronDownMinor}
                         >
                           <Text variant="headingMd">{faq.question}</Text>
                         </Button>
                       )}
                     </Stack.Item>
                     <Stack spacing="tight">
-                      <Button plain icon={faq.editing ? SaveIcon : EditIcon} onClick={() => toggleEdit(faq.id)} />
-                      <Button plain icon={DeleteIcon} onClick={() => deleteFaq(faq.id)} />
+                      <Button plain icon={faq.editing ? SaveMinor : EditMinor} onClick={() => toggleEdit(faq.id)} />
+                      <Button plain icon={DeleteMinor} onClick={() => deleteFaq(faq.id)} />
                     </Stack>
                   </Stack>
 
@@ -166,7 +166,7 @@ export default function FAQs() {
                 />
               </Card.Section>
               <Card.Section>
-                <Button primary icon={PlusIcon} onClick={addFaq}>
+                <Button primary icon={PlusMinor} onClick={addFaq}>
                   Add FAQ
                 </Button>
               </Card.Section>

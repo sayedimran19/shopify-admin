@@ -2,12 +2,12 @@
 
 import { useState, useCallback } from "react"
 import { Page, Layout, Card, Tabs, TextField, Button, Stack, Text, Badge, Icon, SettingToggle } from "@shopify/polaris"
-import { ClipboardIcon, DuplicateIcon, EmailIcon, NotificationIcon, ChartLineIcon,
-  OrderIcon,
-  OrderStatusIcon,
-  InventoryIcon,
-  StarIcon,
-  ShieldCheckMarkIcon } from "~/utils/icons"
+import { DuplicateMinor, EmailMajor, NotificationMajor, AnalyticsMajor,
+  OrdersMajor,
+  InventoryMajor,
+  StarOutlineMinor,
+  SecureMajor, ClipboardMinor, OrderStatusMinor } from "@shopify/polaris-icons"
+  import { } from "@shopify/polaris-icons"
 import AppLayout from "~/components/AppLayout"
 
 export default function Settings() {
@@ -127,7 +127,7 @@ export default function Settings() {
                     onChange={setApiKey}
                     readOnly
                     connectedRight={
-                      <Button onClick={copyToClipboard} icon={copied ? DuplicateIcon : ClipboardIcon}>
+                      <Button onClick={copyToClipboard} icon={copied ? DuplicateMinor : ClipboardMinor}>
                         {copied ? "Copied" : "Copy"}
                       </Button>
                     }
@@ -164,7 +164,7 @@ export default function Settings() {
                     enabled={emailNotifications}
                   >
                     <Stack>
-                      <Icon source={EmailIcon} color="base" />
+                      <Icon source={EmailMajor} color="base" />
                       <Stack vertical spacing="extraTight">
                         <Text variant="headingMd">Email Notifications</Text>
                         <Text variant="bodyMd" color="subdued">
@@ -183,7 +183,7 @@ export default function Settings() {
                     enabled={pushNotifications}
                   >
                     <Stack>
-                      <Icon source={NotificationIcon} color="base" />
+                      <Icon source={NotificationMajor} color="base" />
                       <Stack vertical spacing="extraTight">
                         <Text variant="headingMd">Push Notifications</Text>
                         <Text variant="bodyMd" color="subdued">
@@ -202,7 +202,7 @@ export default function Settings() {
                     enabled={weeklyReports}
                   >
                     <Stack>
-                      <Icon source={ChartLineIcon} color="base" />
+                      <Icon source={AnalyticsMajor} color="base" />
                       <Stack vertical spacing="extraTight">
                         <Text variant="headingMd">Weekly Reports</Text>
                         <Text variant="bodyMd" color="subdued">
@@ -232,7 +232,7 @@ export default function Settings() {
                     enabled={newOrders}
                   >
                     <Stack>
-                      <Icon source={OrderIcon} color="base" />
+                      <Icon source={OrdersMajor} color="base" />
                       <Stack vertical spacing="extraTight">
                         <Text variant="headingMd">New Orders</Text>
                         <Text variant="bodyMd" color="subdued">
@@ -251,7 +251,7 @@ export default function Settings() {
                     enabled={orderStatusUpdates}
                   >
                     <Stack>
-                      <Icon source={OrderStatusIcon} color="base" />
+                      <Icon source={OrderStatusMinor} color="base" />
                       <Stack vertical spacing="extraTight">
                         <Text variant="headingMd">Order Status Updates</Text>
                         <Text variant="bodyMd" color="subdued">
@@ -270,7 +270,7 @@ export default function Settings() {
                     enabled={lowInventoryAlerts}
                   >
                     <Stack>
-                      <Icon source={InventoryIcon} color="base" />
+                      <Icon source={InventoryMajor} color="base" />
                       <Stack vertical spacing="extraTight">
                         <Text variant="headingMd">Low Inventory Alerts</Text>
                         <Text variant="bodyMd" color="subdued">
@@ -289,7 +289,7 @@ export default function Settings() {
                     enabled={customerReviews}
                   >
                     <Stack>
-                      <Icon source={StarIcon} color="base" />
+                      <Icon source={StarOutlineMinor} color="base" />
                       <Stack vertical spacing="extraTight">
                         <Text variant="headingMd">Customer Reviews</Text>
                         <Text variant="bodyMd" color="subdued">
@@ -308,7 +308,7 @@ export default function Settings() {
                     enabled={securityAlerts}
                   >
                     <Stack>
-                      <Icon source={SheildCheckMarkIcon} color="base" />
+                      <Icon source={SecureMajor} color="base" />
                       <Stack vertical spacing="extraTight">
                         <Text variant="headingMd">Security Alerts</Text>
                         <Text variant="bodyMd" color="subdued">

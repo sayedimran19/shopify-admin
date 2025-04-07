@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Page, Layout, Card, Text, Tabs, Stack, Icon } from "@shopify/polaris"
-import { ChartLineIcon, ArrowUpIcon, ArrowDownIcon } from "~/utils/icons"
+import { AnalyticsMajor, ArrowUpMinor, ArrowDownMinor } from "@shopify/polaris-icons"
 import AppLayout from "~/components/AppLayout"
 import { LineChart, BarChart } from "~/components/Charts"
 
@@ -61,10 +61,10 @@ export default function Analytics() {
                     <Text variant="headingMd">Total Queries</Text>
                     <Text variant="headingLg">{analyticsData.totalMetrics.queries}</Text>
                   </Stack>
-                  <Icon source={ChartLineIcon} color="base" />
+                  <Icon source={AnalyticsMajor} color="base" />
                 </Stack>
                 <Stack spacing="tight" alignment="center">
-                  <Icon source={ArrowUpIcon} color="success" />
+                  <Icon source={ArrowUpMinor} color="success" />
                   <Text variant="bodySm" color="success">
                     +18% from last month
                   </Text>
@@ -81,10 +81,10 @@ export default function Analytics() {
                     <Text variant="headingMd">Active Users</Text>
                     <Text variant="headingLg">{analyticsData.totalMetrics.activeUsers}</Text>
                   </Stack>
-                  <Icon source={ChartLineIcon} color="base" />
+                  <Icon source={AnalyticsMajor} color="base" />
                 </Stack>
                 <Stack spacing="tight" alignment="center">
-                  <Icon source={ArrowUpIcon} color="success" />
+                  <Icon source={ArrowUpMinor} color="success" />
                   <Text variant="bodySm" color="success">
                     +12% from last month
                   </Text>
@@ -101,10 +101,10 @@ export default function Analytics() {
                     <Text variant="headingMd">Total Sessions</Text>
                     <Text variant="headingLg">{analyticsData.totalMetrics.sessions}</Text>
                   </Stack>
-                  <Icon source={ChartLineIcon} color="base" />
+                  <Icon source={AnalyticsMajor} color="base" />
                 </Stack>
                 <Stack spacing="tight" alignment="center">
-                  <Icon source={ArrowUpIcon} color="success" />
+                  <Icon source={ArrowUpMinor} color="success" />
                   <Text variant="bodySm" color="success">
                     +15% from last month
                   </Text>
@@ -153,7 +153,7 @@ export default function Analytics() {
                       </Text>
                       <Text variant="headingLg">{analyticsData.responseTimes.average}s</Text>
                       <Stack spacing="tight" alignment="center">
-                        <Icon source={ArrowDownIcon} color="success" />
+                        <Icon source={ArrowDownMinor} color="success" />
                         <Text variant="bodySm" color="success">
                           -0.2s from last month
                         </Text>
@@ -167,7 +167,7 @@ export default function Analytics() {
                       </Text>
                       <Text variant="headingLg">{analyticsData.responseTimes.peak}s</Text>
                       <Stack spacing="tight" alignment="center">
-                        <Icon source={ArrowDownIcon} color="success" />
+                        <Icon source={ArrowDownMinor} color="success" />
                         <Text variant="bodySm" color="success">
                           -0.5s from last month
                         </Text>
@@ -188,7 +188,7 @@ export default function Analytics() {
                 <Stack vertical spacing="tight">
                   <Text variant="headingXl">{analyticsData.conversionRate.value}%</Text>
                   <Stack spacing="tight" alignment="center">
-                    <Icon source={ArrowUpIcon} color="success" />
+                    <Icon source={ArrowUpMinor} color="success" />
                     <Text variant="bodySm" color="success">
                       +0.8% from last month
                     </Text>

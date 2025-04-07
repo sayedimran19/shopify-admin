@@ -5,16 +5,8 @@ import type React from "react"
 import { useState, useCallback } from "react"
 import { useNavigate, useLocation } from "@remix-run/react"
 import { Frame, Navigation, TopBar } from "@shopify/polaris"
-import {
-  HomeIcon,
-  ChartLineIcon,
-  SettingsIcon,
-  PlanIcon,
-  QuestionCircleIcon,
-  ColorIcon,
-  ArrowRightIcon,
-  ExitIcon,
-} from "@shopify/polaris-icons"
+
+import { PlanMajor, ArrowRightMinor, HomeMajor, LogOutMinor, AnalyticsMajor, SettingsMajor, QuestionMarkMajor, ColorsMajor, ExitMajor } from "@shopify/polaris-icons"
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const navigate = useNavigate()
@@ -57,7 +49,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           {
             url: "/",
             label: "Dashboard",
-            icon: HomeIcon,
+            icon: HomeMajor,
             selected: location.pathname === "/",
             onClick: () => {
               navigate("/")
@@ -67,7 +59,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           {
             url: "/analytics",
             label: "Analytics",
-            icon: ChartLineIcon,
+            icon: AnalyticsMajor,
             selected: location.pathname === "/analytics",
             onClick: () => {
               navigate("/analytics")
@@ -77,7 +69,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           {
             url: "/settings",
             label: "Settings",
-            icon: SettingsIcon,
+            icon: SettingsMajor,
             selected: location.pathname === "/settings",
             onClick: () => {
               navigate("/settings")
@@ -87,7 +79,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           {
             url: "/plans",
             label: "Plans",
-            icon: PlanIcon,
+            icon: PlanMajor,
             selected: location.pathname === "/plans",
             onClick: () => {
               navigate("/plans")
@@ -100,7 +92,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           {
             url: "/faqs",
             label: "FAQs",
-            icon: QuestionCircleIcon,
+            icon: QuestionMarkMajor,
             selected: location.pathname === "/faqs",
             onClick: () => {
               navigate("/faqs")
@@ -110,7 +102,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           {
             url: "/customization",
             label: "Customization",
-            icon: ColorIcon,
+            icon: ColorsMajor,
             selected: location.pathname === "/customization",
             onClick: () => {
               navigate("/customization")

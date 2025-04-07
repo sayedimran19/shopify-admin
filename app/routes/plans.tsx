@@ -1,5 +1,5 @@
 import { Page, Layout, Card, Text, Button, Stack, Badge, Icon } from "@shopify/polaris"
-import { CheckIcon } from "~/utils/icons"
+import { ChecklistMajor } from "@shopify/polaris-icons"
 import AppLayout from "~/components/AppLayout"
 
 export default function Plans() {
@@ -91,7 +91,7 @@ export default function Plans() {
                   <Stack vertical>
                     {plan.features.map((feature) => (
                       <Stack alignment="center" key={feature}>
-                        <Icon source={CheckIcon} color="success" />
+                        <Icon source={ChecklistMajor} color="success" />
                         <Text variant="bodyMd">{feature}</Text>
                       </Stack>
                     ))}
